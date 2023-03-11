@@ -1,5 +1,5 @@
 {
-    "name": "BT",
+    "name": "bt",
     "description": "",
     "dependencies": {
         "core": "*",
