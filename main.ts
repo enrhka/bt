@@ -6,6 +6,13 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 let g = 0
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
 g = 0
 basic.forever(function () {
     if (g == 1) {
