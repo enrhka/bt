@@ -1,17 +1,17 @@
-input.onSound(DetectedSound.Loud, function () {
-    g = 1
-    music.playTone(523, music.beat(BeatFraction.Whole))
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    g = 0
+    music.playTone(131, music.beat(BeatFraction.Half))
 })
-input.onLogoEvent(TouchButtonEvent.Touched, function () {
+input.onButtonPressed(Button.A, function () {
     if (g == 0) {
         g = 1
     } else {
         g = 0
     }
 })
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    g = 0
-    music.playTone(131, music.beat(BeatFraction.Whole))
+input.onSound(DetectedSound.Loud, function () {
+    g = 1
+    music.playTone(523, music.beat(BeatFraction.Half))
 })
 let g = 0
 basic.showLeds(`
@@ -33,7 +33,7 @@ basic.forever(function () {
             . . . . .
             . . . . .
             `)
-        basic.pause(500)
+        basic.pause(200)
     } else {
         basic.clearScreen()
     }
